@@ -13,7 +13,7 @@ export default function HeroVideo() {
         playsInline
         className="absolute inset-0 w-full h-full object-cover"
       >
-        <source src="/videos/03 Mera Wedding for Friends (1).mp4" type="video/mp4" />
+        <source src="/videos/20190802_115533.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
