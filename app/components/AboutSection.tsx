@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 export default function AboutSection() {
@@ -51,17 +52,19 @@ export default function AboutSection() {
             effortlessly for every occasion, combining elegance with
             unforgettable charm.
           </p>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-[#c68c7c] text-white px-6 py-3 rounded-full shadow-md hover:bg-[#b47a6b] transition-all"
-          >
-            Discover More
-          </motion.button>
+
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <Link
+              href="/contact"
+              className="inline-block bg-[#c68c7c] text-white px-6 py-3 rounded-full shadow-md hover:bg-[#b47a6b] transition-all"
+            >
+              Discover More
+            </Link>
+          </motion.div>
         </motion.div>
       </div>
 
-      {/* Decorative background leaf or shape (optional) */}
+      {/* Decorative background leaf or shape */}
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 0.1 }}

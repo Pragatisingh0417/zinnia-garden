@@ -29,7 +29,7 @@ export default function SuppliersPage() {
   const suppliers: SupplierGroup[] = [
     {
       category: "Photography",
-      icon: <FaCamera className="text-amber-600 text-3xl" />,
+      icon: <FaCamera className="text-[#c68c7c] text-3xl" />,
       list: [
         { name: "Sarah Legge", website: "https://www.sarahleggephotography.co.uk" },
         { name: "Ian Clarke", website: "https://www.iainclarkephotography.co.uk" },
@@ -40,17 +40,17 @@ export default function SuppliersPage() {
     },
     {
       category: "Florists",
-      icon: <FaLeaf className="text-amber-600 text-3xl" />,
+      icon: <FaLeaf className="text-[#c68c7c] text-3xl" />,
       list: [{ name: "Ashdown Events", website: "https://www.ashdownevents.co.uk" }],
     },
     {
       category: "Soft Play for Children",
-      icon: <FaChild className="text-amber-600 text-3xl" />,
+      icon: <FaChild className="text-[#c68c7c] text-3xl" />,
       list: [{ name: "Krazy Kidz", website: "https://www.kksoftplay.co.uk" }],
     },
     {
       category: "Harpist",
-      icon: <GiHarp className="text-amber-600 text-3xl" />,
+      icon: <GiHarp className="text-[#c68c7c] text-3xl" />,
       list: [
         {
           name: "Lynda Hayes",
@@ -61,17 +61,17 @@ export default function SuppliersPage() {
     },
     {
       category: "Musicians",
-      icon: <FaMusic className="text-amber-600 text-3xl" />,
+      icon: <FaMusic className="text-[#c68c7c] text-3xl" />,
       list: [{ name: "Spotlight Entertainment", contact: "020 8641 4522" }],
     },
     {
       category: "Car Hire",
-      icon: <FaCar className="text-amber-600 text-3xl" />,
+      icon: <FaCar className="text-[#c68c7c] text-3xl" />,
       list: [{ name: "Classic Car Hire", website: "https://www.classic-hire.co.uk" }],
     },
     {
       category: "Balloons",
-      icon: <FaGift className="text-amber-600 text-3xl" />, // ✅ replaced FaBalloon with FaGift
+      icon: <FaGift className="text-[#c68c7c] text-3xl" />, 
       list: [
         { name: "Alison", website: "https://www.balloonacy.co.uk", contact: "07914 087901" },
         { name: "Ashdown Events", website: "https://www.ashdownevents.co.uk" },
@@ -79,12 +79,12 @@ export default function SuppliersPage() {
     },
     {
       category: "Indian Mandaps",
-      icon: <FaLeaf className="text-amber-600 text-3xl" />,
+      icon: <FaLeaf className="text-[#c68c7c] text-3xl" />,
       list: [{ name: "Exclusive Events", website: "https://www.exclusiveevents.com" }],
     },
     {
       category: "Taxi Company",
-      icon: <FaTaxi className="text-amber-600 text-3xl" />,
+      icon: <FaTaxi className="text-[#c68c7c] text-3xl" />,
       list: [
         {
           name: "Platinum Drive Ltd",
@@ -137,7 +137,7 @@ export default function SuppliersPage() {
                       href={supplier.website}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-amber-600 hover:text-amber-700 text-sm underline"
+                      className="text-[#c68c7c] hover:text-amber-700 text-sm underline"
                     >
                       {supplier.website.replace(/^https?:\/\//, "")}
                     </a>
@@ -160,7 +160,7 @@ export default function SuppliersPage() {
         </p>
         <a
           href="/contact"
-          className="bg-black text-white px-6 py-3 rounded-full font-semibold hover:bg-amber-600 transition"
+          className="bg-black text-white px-6 py-3 rounded-full font-semibold hover:bg-[#c68c7c] transition"
         >
           Contact Us
         </a>

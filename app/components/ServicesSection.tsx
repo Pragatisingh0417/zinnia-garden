@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -69,13 +70,17 @@ export default function ServicesSection() {
                 <p className="text-[#5c5c5c] text-sm leading-relaxed mb-4">
                   {service.description}
                 </p>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="mt-2 px-5 py-2 rounded-full bg-[#c68c7c] text-white text-sm shadow-md hover:bg-[#b47a6b] transition-colors"
-                >
-                  Learn More
-                </motion.button>
+<motion.div
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+>
+  <Link
+    href="/contact"
+    className="mt-2 inline-block px-5 py-2 rounded-full bg-[#c68c7c] text-white text-sm shadow-md hover:bg-[#b47a6b] transition-colors"
+  >
+    Learn More
+  </Link>
+</motion.div>
               </div>
             </motion.div>
           ))}

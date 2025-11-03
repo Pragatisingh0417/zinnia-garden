@@ -20,7 +20,7 @@ export default function MarqueePage() {
       {/* ✅ HERO SECTION */}
       <section
         ref={ref}
-        className="relative h-[70vh] flex items-center justify-center overflow-hidden"
+        className="relative h-[80vh] flex items-center justify-center overflow-hidden"
       >
         {/* Background with parallax */}
         <motion.div
@@ -28,7 +28,7 @@ export default function MarqueePage() {
           className="absolute inset-0"
         >
           <Image
-            src="/images/zinnia-image-5.jpg"
+            src="/images/image-8.jpg"
             alt="Luxury Marquee"
             fill
             priority

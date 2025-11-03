@@ -55,8 +55,8 @@ export default function Header() {
         {/* Desktop Book Button */}
         <div className="hidden md:flex">
           <Link
-            href="/contact"
-            className="bg-black text-white px-5 py-2 rounded-full font-semibold hover:bg-amber-600 transition shadow-sm hover:shadow-md"
+            href="/book-viewing"
+            className="bg-black text-white px-5 py-2 rounded-full font-semibold hover:bg-[#c68c7c] transition shadow-sm hover:shadow-md"
           >
             Book Now
           </Link>
@@ -91,8 +91,8 @@ export default function Header() {
               </Link>
             ))}
             <Link
-              href="/contact"
-              className="bg-black text-white px-4 py-2 rounded-full font-semibold hover:bg-amber-600 transition text-center"
+              href="/book-viewing"
+              className="bg-black text-white px-4 py-2 rounded-full font-semibold hover:bg-blue-600 transition text-center"
               onClick={() => setMenuOpen(false)}
             >
               Book Now

@@ -106,7 +106,7 @@ export default function FAQPage() {
       <section className="grid grid-cols-1 md:grid-cols-3 gap-4 px-6 md:px-16 pb-20">
         <div className="relative h-64 rounded-2xl overflow-hidden shadow-md">
           <Image
-            src="/images/image-8.jpg" // e.g. marquee setup or garden view
+            src="/images/image-8.jpg" 
             alt="Marquee Event"
             fill
             className="object-cover hover:scale-105 transition-transform duration-500"
@@ -114,7 +114,7 @@ export default function FAQPage() {
         </div>
         <div className="relative h-64 rounded-2xl overflow-hidden shadow-md">
           <Image
-            src="/images/image-8.jpg" // e.g. catering setup
+            src="/catering/catering-1.jpg" // e.g. catering setup
             alt="Catering Setup"
             fill
             className="object-cover hover:scale-105 transition-transform duration-500"
@@ -122,7 +122,7 @@ export default function FAQPage() {
         </div>
         <div className="relative h-64 rounded-2xl overflow-hidden shadow-md">
           <Image
-            src="/images/image-8.jpg" // e.g. evening garden lighting
+            src="/catering/catering-6.jpg" // e.g. evening garden lighting
             alt="Evening Ambience"
             fill
             className="object-cover hover:scale-105 transition-transform duration-500"
