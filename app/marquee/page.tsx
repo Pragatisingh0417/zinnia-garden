@@ -26,35 +26,40 @@ export default function MarqueePage() {
   return (
     <main className="bg-[#f8f9f7] overflow-hidden text-[#191919]">
       {/* ✅ HERO SECTION */}
-      <section
-        ref={ref}
-        className="relative h-[80vh] flex items-center justify-center overflow-hidden"
-      >
-        {/* Background with parallax */}
-        <motion.div style={{ y: yHero, opacity: opacityHero }} className="absolute inset-0">
-          <Image
-            src="/images/LavenderFields (1).jpg"
-            alt="Luxury Marquee"
-            fill
-            priority
-            loading="eager"
-            className="object-cover"
-          />
-        </motion.div>
+     {/* ✅ HERO SECTION */}
+<section
+  ref={ref}
+  className="relative min-h-[60vh] sm:min-h-[70vh] lg:min-h-[85vh] flex items-center justify-center overflow-hidden"
+>
+  {/* Background with parallax */}
+  <motion.div
+    style={{ y: yHero, opacity: opacityHero }}
+    className="absolute inset-0"
+  >
+    <Image
+      src="/images/LavenderFields (1).jpg"
+      alt="Luxury Marquee"
+      fill
+      priority
+      loading="eager"
+      className="object-cover object-center"
+    />
+  </motion.div>
 
-        {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/40" />
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-black/40 sm:bg-black/35 md:bg-black/30" />
 
-        {/* Hero Title */}
-        <motion.h1
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, ease: "easeOut" }}
-          className="relative z-10 text-white text-4xl sm:text-6xl font-light tracking-widest text-center drop-shadow-lg"
-        >
-          Step Into Elegance
-        </motion.h1>
-      </section>
+  {/* Hero Title */}
+  <motion.h1
+    initial={{ opacity: 0, y: 40 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.9, ease: "easeOut" }}
+    className="relative z-10 text-white text-3xl sm:text-5xl lg:text-7xl font-light tracking-[4px] sm:tracking-[8px] text-center drop-shadow-[0_2px_6px_rgba(0,0,0,0.5)] px-4"
+  >
+    Step Into Elegance
+  </motion.h1>
+</section>
+
 
       {/* ✅ INTRO VIDEO + CONTENT */}
       <section className="relative bg-gradient-to-b from-[#fffaf5] via-[#fffaf5] to-[#ffffff] py-20 sm:py-28 overflow-hidden">

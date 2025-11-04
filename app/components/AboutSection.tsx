@@ -5,15 +5,15 @@ import { motion } from "framer-motion";
 
 export default function AboutSection() {
   return (
-    <section className="relative bg-gradient-to-b from-[#fffaf5] via-[#fffdfb] to-[#ffffff] py-20 sm:py-28 overflow-hidden">
-      <div className="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center gap-16">
+    <section className="relative bg-gradient-to-b from-[#fffaf5] via-[#fffdfb] to-[#ffffff] py-16 sm:py-20 md:py-28 overflow-hidden">
+      <div className="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-10 flex flex-col md:flex-row items-center gap-10 md:gap-16">
         {/* Left Video */}
         <motion.div
           initial={{ opacity: 0, x: -60 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.9, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="flex-1 relative group"
+          className="flex-1 w-full relative group"
         >
           <div className="relative rounded-3xl overflow-hidden shadow-2xl transform transition-transform duration-700 group-hover:scale-[1.02]">
             <video
@@ -22,7 +22,7 @@ export default function AboutSection() {
               loop
               muted
               playsInline
-              className="w-full h-auto object-cover"
+              className="w-full h-full object-cover aspect-[4/3] sm:aspect-[16/9]"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
           </div>
@@ -37,28 +37,28 @@ export default function AboutSection() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
           viewport={{ once: true }}
-          className="flex-1 text-center md:text-left"
+          className="flex-1 text-center md:text-left mt-8 md:mt-0"
         >
-          <span className="uppercase tracking-[6px] text-[#B98B4E] text-sm font-semibold mb-3 inline-block">
+          <span className="uppercase tracking-[4px] sm:tracking-[6px] text-[#B98B4E] text-xs sm:text-sm font-semibold mb-3 inline-block">
             Welcome to Zinnia Gardens
           </span>
 
-          <h2 className="text-4xl sm:text-5xl font-light text-[#191919] mb-6 leading-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-[#191919] mb-6 leading-tight">
             A Private Estate for Timeless Celebrations
           </h2>
 
-          <p className="text-[#5c5c5c] leading-relaxed mb-5 text-[1.05rem]">
-            Nestled in the heart of Surrey, <strong className="text-[#3A1E01]">Zinnia Gardens</strong> 
-            is a privately owned estate — a secluded and exclusive venue that has 
-            delighted guests for over a decade. The grounds host a limited number 
-            of private events each year, ensuring every experience is truly exceptional.
+          <p className="text-[#5c5c5c] leading-relaxed mb-5 text-[0.95rem] sm:text-[1.05rem]">
+            Nestled in the heart of Surrey,{" "}
+            <strong className="text-[#3A1E01]">Zinnia Gardens</strong> is a privately
+            owned estate — a secluded and exclusive venue that has delighted guests
+            for over a decade. The grounds host a limited number of private events
+            each year, ensuring every experience is truly exceptional.
           </p>
 
-          <p className="text-[#5c5c5c] leading-relaxed mb-10 text-[1.05rem]">
-            From intimate wedding receptions and milestone celebrations to 
-            fashion shows and product launches — Zinnia Gardens transforms 
-            effortlessly for every occasion, blending sophistication with 
-            natural beauty.
+          <p className="text-[#5c5c5c] leading-relaxed mb-8 sm:mb-10 text-[0.95rem] sm:text-[1.05rem]">
+            From intimate wedding receptions and milestone celebrations to fashion
+            shows and product launches — Zinnia Gardens transforms effortlessly for
+            every occasion, blending sophistication with natural beauty.
           </p>
 
           <motion.div
@@ -68,7 +68,7 @@ export default function AboutSection() {
           >
             <Link
               href="/contact"
-              className="inline-block bg-[#3A1E01] text-white px-8 py-3 rounded-full shadow-lg hover:bg-[#B98B4E] transition-all duration-300"
+              className="inline-block bg-[#3A1E01] text-white px-6 sm:px-8 py-3 rounded-full shadow-lg hover:bg-[#B98B4E] transition-all duration-300 text-sm sm:text-base"
             >
               Discover More
             </Link>
@@ -84,7 +84,7 @@ export default function AboutSection() {
         viewport={{ once: true }}
         src="/images/img-right.png"
         alt="Decorative leaf"
-        className="absolute bottom-0 right-0 w-[250px] sm:w-[350px] pointer-events-none select-none"
+        className="absolute bottom-0 right-0 w-[180px] sm:w-[250px] lg:w-[350px] pointer-events-none select-none"
       />
     </section>
   );

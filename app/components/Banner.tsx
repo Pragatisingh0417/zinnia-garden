@@ -21,7 +21,7 @@ export default function Banner() {
   const getNextIndex = () => (activeIndex + 1) % slides.length;
 
   return (
-    <section className="relative flex flex-col items-center justify-center text-center bg-[#f2f8f3] py-16 sm:py-24 overflow-hidden">
+    <section className="relative flex flex-col items-center justify-center text-center bg-[#f2f8f3] py-16 sm:py-24 lg:py-32 overflow-hidden">
       <FixedFlowers />
 
       {/* Heading */}
@@ -30,7 +30,7 @@ export default function Banner() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="text-3xl sm:text-4xl md:text-4xl font-light tracking-widest text-[#191919] mb-4 px-4"
+        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light tracking-[0.3em] text-[#191919] mb-4 px-4 mt-5 leading-snug"
       >
         PLAN · IT · TO · PERFECTION
       </motion.h1>
@@ -41,10 +41,9 @@ export default function Banner() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
         viewport={{ once: true }}
-        className="text-base sm:text-lg italic text-[#c68c7c] max-w-2xl mx-auto mb-10 sm:mb-12 px-4"
+        className="text-sm sm:text-base md:text-lg italic text-[#c68c7c] max-w-xl sm:max-w-2xl mx-auto mb-8 sm:mb-12 px-6"
       >
-        A secret outdoor venue, which virtually transforms from a stunning day,
-        to a magical evening setting.
+        A secret outdoor venue that transforms from a stunning day to a magical evening setting.
       </motion.p>
 
       {/* Slider wrapper */}
@@ -53,12 +52,12 @@ export default function Banner() {
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
         viewport={{ once: true }}
-        className="relative w-full flex items-end justify-center gap-4 sm:gap-8 px-4"
+        className="relative w-full flex items-end justify-center gap-3 sm:gap-6 md:gap-8 px-4"
       >
-        {/* Left preview */}
+        {/* Left preview (hidden on small screens) */}
         <motion.div
           key={getPrevIndex()}
-          className="hidden sm:block w-32 sm:w-44 md:w-56 rounded-xl overflow-hidden shadow-lg"
+          className="hidden md:block w-32 sm:w-44 md:w-52 lg:w-64 rounded-xl overflow-hidden shadow-md"
           initial={{ opacity: 0.7, scale: 0.9, y: 60 }}
           animate={{ opacity: 1, scale: 0.95, y: 60 }}
           transition={{ duration: 0.6 }}
@@ -73,7 +72,7 @@ export default function Banner() {
         </motion.div>
 
         {/* Center Swiper */}
-        <div className="relative bg-white rounded-3xl shadow-2xl p-3 sm:p-4 w-[80%] sm:w-[600px] md:w-[600px] overflow-hidden">
+        <div className="relative bg-white rounded-3xl shadow-2xl p-2 sm:p-3 md:p-4 w-[88%] sm:w-[85%] md:w-[600px] lg:w-[720px] overflow-hidden">
           <Swiper
             modules={[Autoplay]}
             slidesPerView={1}
@@ -84,7 +83,7 @@ export default function Banner() {
           >
             {slides.map((src, i) => (
               <SwiperSlide key={i}>
-                <div className="relative w-full h-[260px] sm:h-[350px] md:h-[380px]">
+                <div className="relative w-full h-[220px] sm:h-[320px] md:h-[400px] lg:h-[480px]">
                   <Image
                     src={src}
                     alt={`Slide ${i + 1}`}
@@ -97,7 +96,7 @@ export default function Banner() {
             ))}
           </Swiper>
 
-          {/* Dot animation */}
+          {/* Dot Animation */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: [0.3, 1, 0.3] }}
@@ -113,10 +112,10 @@ export default function Banner() {
           </motion.div>
         </div>
 
-        {/* Right preview */}
+        {/* Right preview (hidden on small screens) */}
         <motion.div
           key={getNextIndex()}
-          className="hidden sm:block w-32 sm:w-44 md:w-56 rounded-xl overflow-hidden shadow-lg"
+          className="hidden md:block w-32 sm:w-44 md:w-52 lg:w-64 rounded-xl overflow-hidden shadow-md"
           initial={{ opacity: 0.7, scale: 0.9, y: 60 }}
           animate={{ opacity: 1, scale: 0.95, y: 60 }}
           transition={{ duration: 0.6 }}
