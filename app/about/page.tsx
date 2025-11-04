@@ -2,19 +2,18 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import HeroVideo from "../components/HeroVideo";
+import Banner from "../components/Banner";
+import Link from "next/link";
+
 
 export default function AboutPage() {
   return (
-    <main className="bg-[#f8f9f7] text-[#191919] overflow-hidden">
+    <main className="bg-[#fffaf5] text-[#191919] overflow-hidden">
       {/* Hero Section */}
-      <section className="relative flex flex-col items-center justify-center text-center bg-[#f2f8f3] overflow-hidden">
-             <HeroVideo />
-
-      </section>
+<Banner />
 
       {/* About Content */}
-      <section className="max-w-6xl mx-auto px-6 py-20 sm:py-28 grid md:grid-cols-2 gap-12 items-center">
+      <section className="max-w-[1400px]  mx-auto px-6 py-20 sm:py-28 grid md:grid-cols-2 gap-12 items-center">
         {/* Left Image */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -23,14 +22,13 @@ export default function AboutPage() {
           className="relative"
         >
           <Image
-            src="/images/zinnia-image-5.jpg"
+            src="/gallery/wedding-image.jpg"
             alt="Venue Garden"
             width={600}
-            height={500}
-            loading="eager"
-            priority
-            className="aspect-[6/5] w-full rounded-3xl shadow-md object-cover"
+            height={400}
+            className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
           />
+           
         </motion.div>
 
         {/* Right Text */}
@@ -54,11 +52,23 @@ export default function AboutPage() {
             partners take pride in creating experiences that blend natural
             beauty with refined elegance.
           </p>
+          <motion.div
+            whileHover={{ scale: 1.07 }}
+            whileTap={{ scale: 0.97 }}
+            transition={{ type: "spring", stiffness: 200 }}
+          >
+            <Link
+              href="/contact"
+              className="inline-block bg-[#3A1E01] text-white px-8 py-3 mt-4 rounded-full shadow-lg hover:bg-[#B98B4E] transition-all duration-300"
+            >
+              Discover More
+            </Link>
+          </motion.div>
         </motion.div>
       </section>
 
       {/* Additional Visual Section */}
-      <section className="max-w-6xl mx-auto px-6 pb-24 grid md:grid-cols-2 gap-12 items-center">
+      <section className="max-w-[1400px] mx-auto mx-auto px-6 pb-24 grid md:grid-cols-2 gap-12 items-center">
         {/* Text First on Mobile */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -79,6 +89,18 @@ export default function AboutPage() {
             We invite you to explore, dream, and celebrate — surrounded by the
             charm of nature and elegance of design.
           </p>
+          <motion.div
+            whileHover={{ scale: 1.07 }}
+            whileTap={{ scale: 0.97 }}
+            transition={{ type: "spring", stiffness: 200 }}
+          >
+            <Link
+              href="/contact"
+              className="inline-block bg-[#3A1E01] text-white px-8 py-3  mt-5 rounded-full shadow-lg hover:bg-[#B98B4E] transition-all duration-300"
+            >
+              Know More
+            </Link>
+          </motion.div>
         </motion.div>
 
         {/* Image */}
@@ -92,11 +114,33 @@ export default function AboutPage() {
             src="/images/zinnia-image-6.jpg"
             alt="Zinnia Gardens Evening"
             width={600}
-            height={500}
-            loading="eager"
-            className="aspect-[6/5] w-full rounded-3xl shadow-md object-cover"
+            height={400}
+            className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
           />
         </motion.div>
+      </section>
+
+       {/* ✅ CTA SECTION */}
+      <section className="relative py-18 text-white text-center overflow-hidden">
+        <Image
+          src="/images/zinnia-image-2.jpg"
+          alt="Marquee Background"
+          fill
+          className="object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative z-10 max-w-2xl mx-auto px-6">
+          <h2 className="text-3xl sm:text-4xl font-light mb-6">
+know More About Zinnia Garden By Contacting Us Directly          </h2>
+          <p className="text-[#ddd] mb-8">
+            Schedule a private viewing and experience the grandeur up close.
+          </p>
+          <Link href="/contact">
+            <button className="bg-[#3A1E01] text-gray-300 px-8 py-3 rounded-full font-medium hover:bg-[#B98B4E] transition">
+              Book a Viewing
+            </button>
+          </Link>
+        </div>
       </section>
     </main>
   );

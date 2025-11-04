@@ -12,6 +12,8 @@ import {
 } from "react-icons/fa"; // ✅ replaced FaBalloon with FaGift
 import { GiHarp } from "react-icons/gi";
 import Image from "next/image";
+import Link from "next/link";
+
 
 type Supplier = {
   name: string;
@@ -98,9 +100,9 @@ export default function SuppliersPage() {
   return (
     <main className="bg-white text-gray-800 min-h-screen">
       {/* Hero Section */}
-      <section className="relative w-full h-[350px] md:h-[450px] overflow-hidden">
+      <section className="relative w-full h-[350px] md:h-[500px] overflow-hidden">
         <Image
-          src="/suppliers/supplier-image-2.jpg" 
+          src="/images/main.jpg" 
           alt="Zinnia Gardens Suppliers"
           fill
           className="object-cover brightness-75"
@@ -117,7 +119,7 @@ export default function SuppliersPage() {
       </section>
 
       {/* Suppliers Grid */}
-      <section className="max-w-6xl mx-auto py-16 px-6 md:px-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <section className="max-w-[1400px]  mx-auto py-16 px-6 md:px-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {suppliers.map((group, index) => (
           <div
             key={index}
@@ -152,18 +154,31 @@ export default function SuppliersPage() {
         ))}
       </section>
 
-      {/* Call to Action */}
-      <section className="text-center py-12 bg-amber-50">
-        <h2 className="text-2xl font-bold text-gray-900 mb-3">Want to Partner With Us?</h2>
-        <p className="text-gray-700 mb-6">
-          If you're a supplier who shares our commitment to excellence, we’d love to hear from you.
-        </p>
-        <a
-          href="/contact"
-          className="bg-black text-white px-6 py-3 rounded-full font-semibold hover:bg-[#c68c7c] transition"
-        >
-          Contact Us
-        </a>
+     
+
+       {/* ✅ CTA SECTION */}
+      <section className="relative py-18 text-white text-center overflow-hidden">
+        <Image
+          src="/images/zinnia-image-2.jpg"
+          alt="Marquee Background"
+          fill
+          className="object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative z-10 max-w-2xl mx-auto px-6">
+          <h2 className="text-3xl sm:text-4xl font-light mb-6">
+Want to Partner With Us?
+          </h2>
+          <p className="text-[#ddd] mb-8">
+If you're a supplier who shares our commitment to excellence, we’d love to hear from you.
+
+          </p>
+          <Link href="/contact">
+            <button className="bg-[#3A1E01] text-gray-300 px-8 py-3 rounded-full font-medium hover:bg-[#B98B4E] transition">
+              Book a Viewing
+            </button>
+          </Link>
+        </div>
       </section>
     </main>
   );

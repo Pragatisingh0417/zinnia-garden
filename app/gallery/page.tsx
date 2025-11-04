@@ -6,18 +6,23 @@ import Image from "next/image";
 const galleryCategories = [
   {
     title: "Surrey Wedding",
-    slug: "surry-wedding",
+    slug: "surrey-wedding",
     cover: "/gallery/Surrey-wedding-photographer_0114.jpg",
   },
   {
-    title: "Emily & Jack’s Reception",
-    slug: "emily-jack",
-    cover: "/gallery/emily-jack/cover.jpg",
+    title: "Asian Weddings",
+    slug: "asian-weddings",
+    cover: "/gallery/asian-wedding-1.jpeg",
   },
   {
-    title: "Priya & Arjun’s Celebration",
-    slug: "priya-arjun",
-    cover: "/gallery/priya-arjun/cover.jpg",
+    title: "Parties and Other",
+    slug: "partiesandothers",
+    cover: "/gallery/RAFYL_0107.jpg",
+  },
+  {
+    title: "Weddings",
+    slug: "Weddings",
+    cover: "/gallery/WED1.jpg",
   },
 ];
 
@@ -44,7 +49,7 @@ export default function GalleryPage() {
       </section>
 
       {/* Categories Grid */}
-      <section className="max-w-6xl mx-auto py-16 px-6 md:px-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <section className="max-w-[1400px] mx-auto py-16 px-6 md:px-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
         {galleryCategories.map((category) => (
           <Link
             key={category.slug}

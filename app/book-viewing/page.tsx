@@ -19,12 +19,12 @@ export default function BookViewing() {
             transition={{ duration: 0.5 }}
             className="max-w-xl bg-white shadow-xl rounded-2xl p-10 border border-pink-100"
           >
-            <h1 className="text-3xl font-semibold mb-4 text-[#c68c7c]">
+            <h1 className="text-3xl font-semibold mb-4 text-[#3A1E01]">
               Book a Venue Viewing
             </h1>
             <p className="text-gray-600 mb-8">
               Our wedding venue packages start from{" "}
-              <span className="font-medium text-[#c68c7c]">₹X lakhs</span>.  
+              <span className="font-medium text-[#3A1E01]">₹X lakhs</span>.  
               Please confirm that this fits within your budget before booking a viewing.
             </p>
 
@@ -33,7 +33,7 @@ export default function BookViewing() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setConfirmed(true)}
-                className="bg-[#c68c7c] text-white px-6 py-3 rounded-xl shadow-md hover:[#c68c7c] transition-all"
+                className="bg-[#3A1E01] text-white px-6 py-3 rounded-xl shadow-md hover:[#c68c7c] transition-all"
               >
                 Yes, Continue
               </motion.button>
@@ -60,7 +60,7 @@ export default function BookViewing() {
             transition={{ duration: 0.5 }}
             className="w-full max-w-3xl bg-white shadow-xl rounded-2xl p-6 border border-pink-100"
           >
-            <h2 className="text-2xl font-semibold text-[#c68c7c] mb-4">
+            <h2 className="text-2xl font-semibold text-[#c68c7c] mb-4 mt-10">
               Schedule Your Viewing
             </h2>
             <InlineWidget url="https://calendly.com/yourusername/viewing" />

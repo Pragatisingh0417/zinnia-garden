@@ -30,7 +30,7 @@ export default function Banner() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="text-3xl sm:text-4xl md:text-5xl font-light tracking-widest text-[#191919] mb-4 px-4"
+        className="text-3xl sm:text-4xl md:text-4xl font-light tracking-widest text-[#191919] mb-4 px-4"
       >
         PLAN · IT · TO · PERFECTION
       </motion.h1>
@@ -73,7 +73,7 @@ export default function Banner() {
         </motion.div>
 
         {/* Center Swiper */}
-        <div className="relative bg-white rounded-3xl shadow-2xl p-3 sm:p-4 w-[85%] sm:w-[600px] md:w-[650px] overflow-hidden">
+        <div className="relative bg-white rounded-3xl shadow-2xl p-3 sm:p-4 w-[80%] sm:w-[600px] md:w-[600px] overflow-hidden">
           <Swiper
             modules={[Autoplay]}
             slidesPerView={1}

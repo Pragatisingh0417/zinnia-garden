@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 
 import React from "react";
 import Image from "next/image";
@@ -12,7 +13,7 @@ export default function CateringPage() {
   return (
     <main className="bg-white text-gray-800 min-h-screen">
       {/* 🏞️ Banner Section */}
-      <section className="relative w-full h-[350px] md:h-[600px] overflow-hidden">
+      <section className="relative w-full h-[350px] md:h-[500px] overflow-hidden">
         <Image
           src="/catering/catering-10.jpg"
           alt="Zinnia Gardens Catering"
@@ -36,7 +37,7 @@ export default function CateringPage() {
       </section>
 
       {/* 🍽️ Catering Content Section */}
-      <section className="max-w-6xl mx-auto py-16 px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <section className="max-w-[1400px] mx-auto py-16 px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         {/* Left: Image Slider */}
         <div className="w-full">
           <Swiper
@@ -83,12 +84,43 @@ export default function CateringPage() {
           </p>
           <a
             href="/contact"
-            className="inline-block bg-[#c68c7c] hover:bg-[#b1796a] text-white px-6 py-3 rounded-full font-medium transition-all duration-300"
+            className="inline-block bg-[#3A1E01] hover:bg-[#B98B4E] text-white px-6 py-3 rounded-full font-medium transition-all duration-300"
           >
             Enquire Now
           </a>
         </div>
       </section>
+      <section className="relative py-20 text-white text-center overflow-hidden">
+        {/* Background Image */}
+        <Image
+          src="/images/zinnia-image-2.jpg" // ← change to your background image path
+          alt="Marquee Background"
+          fill
+          className="object-cover object-center"
+        />
+      
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/50" />
+      
+        {/* Content */}
+        <div className="relative z-10 max-w-2xl mx-auto px-6">
+          <h2 className="text-3xl sm:text-4xl font-light mb-6">
+            See the Zinnia Garden in Person
+          </h2>
+          <p className="text-[#ddd] mb-8">
+            Schedule a private viewing and experience the grandeur up close.
+          </p>
+      
+          {/* Contact Page Link Button */}
+          <Link href="/contact">
+            <button className="bg-[#3A1E01] text-gray-300 px-8 py-3 rounded-full font-medium hover:bg-[#B98B4E] transition">
+              Book a Viewing
+            </button>
+          </Link>
+        </div>
+      </section>
+
+      
     </main>
   );
 }

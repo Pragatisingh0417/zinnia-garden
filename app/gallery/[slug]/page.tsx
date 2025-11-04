@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useParams } from "next/navigation";
 
 const galleryImages: Record<string, string[]> = {
-  "surry-wedding": [
+  "surrey-wedding": [
         "/gallery/Surrey-wedding-photographer_0160.jpg",
     "/gallery/Surrey-wedding-photographer_0114.jpg",
     "/gallery/Surrey-wedding-photographer_0118.jpg",
@@ -19,15 +19,46 @@ const galleryImages: Record<string, string[]> = {
                     "/gallery/Surrey-wedding-photographer_0172.jpg",
 
   ],
-  "emily-jack": [
-    "/gallery/emily-jack/1.jpg",
-    "/gallery/emily-jack/2.jpg",
-    "/gallery/emily-jack/3.jpg",
+  "asian-weddings": [
+    "/gallery/asian-wedding-1.jpeg",
+    "/gallery/asian-wedding-2.jpeg",
+    "/gallery/asian-wedding-3.jpeg",
+        "/gallery/asian-wedding-4.jpeg",
+
+            "/gallery/asian-wedding-5.jpeg",
+
+                "/gallery/asian-wedding-9.jpeg",
+
+
+                        "/gallery/asian-wedding-8.jpeg",
+
   ],
-  "priya-arjun": [
-    "/gallery/priya-arjun/1.jpg",
-    "/gallery/priya-arjun/2.jpg",
-    "/gallery/priya-arjun/3.jpg",
+  "partiesandothers": [
+    "/gallery/RAFYL_0107.jpg",
+    "/gallery/RAFYL_0145.jpg",
+    "/gallery/RAFYL_0161.jpg",
+        "/gallery/parties-1.jpg",
+
+            "/gallery/parties-2.jpg",
+
+                "/gallery/parties-3.jpg",
+
+                    "/gallery/parties-4.jpg",
+
+  ],
+
+  "Weddings": [
+    "/gallery/WED1.jpg",
+    "/gallery/WED2.jpg",
+    "/gallery/WED3.jpg",
+
+        "/gallery/WED4.jpg",
+
+            "/gallery/WED5.jpg",
+                "/gallery/WED6.jpg",
+    "/gallery/WED111.jpg",
+
+
   ],
 };
 

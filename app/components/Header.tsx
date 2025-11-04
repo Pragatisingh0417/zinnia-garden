@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -15,24 +16,25 @@ export default function Header() {
     { name: "Marquee", href: "/marquee" },
     { name: "Catering", href: "/catering" },
     { name: "Gallery", href: "/gallery" },
-    { name: "Contact", href: "/contact" },
     { name: "Suppliers", href: "/suppliers" },
     { name: "FAQ", href: "/faq" },
     { name: "Privacy Policy", href: "/privacyandpolicy" },
+        { name: "Contact", href: "/contact" },
+
   ];
 
   return (
-    <nav className="bg-white text-gray-900 shadow-md fixed w-full z-50">
-      <div className="container mx-auto flex justify-between items-center px-6 py-3">
+    <nav className="bg-[#3A1E01] text-[#F4EFEA] shadow-md fixed w-full z-50">
+      <div className="container mx-auto flex justify-between items-center px-6 py-5">
         {/* Logo */}
         <Link href="/">
-          <img
-            src="/zinnia-logo-black-horizontal.png"
-            alt="Zinnia Gardens Logo"
-            width={120}
-            height={50}
-            className="object-contain"
-          />
+          <Image
+                       src="/zinnia-logo-black-horizontal.png"
+                       alt="Zinnia Gardens"
+                       width={160}
+                       height={60}
+                       className="invert drop-shadow-lg"
+                     />
         </Link>
 
         {/* Desktop Menu */}
@@ -42,9 +44,9 @@ export default function Header() {
               key={link.name}
               href={link.href}
               className={`px-4 py-2 rounded-full transition-all duration-200 ${
-                pathname === link.href
-                  ? "bg-black text-white"
-                  : "hover:bg-black hover:text-white"
+                 pathname === link.href
+    ? "bg-[#B98B4E] text-white"
+    : "hover:bg-[#B98B4E] hover:text-white"
               }`}
             >
               {link.name}
@@ -54,12 +56,12 @@ export default function Header() {
 
         {/* Desktop Book Button */}
         <div className="hidden md:flex">
-          <Link
-            href="/book-viewing"
-            className="bg-black text-white px-5 py-2 rounded-full font-semibold hover:bg-[#c68c7c] transition shadow-sm hover:shadow-md"
-          >
-            Book Now
-          </Link>
+         <Link
+  href="/book-viewing"
+  className="bg-[#B98B4E] text-white px-5 py-2 rounded-full font-semibold hover:bg-[#3A1E01] transition shadow-sm hover:shadow-md"
+>
+  Book Now
+</Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -92,7 +94,7 @@ export default function Header() {
             ))}
             <Link
               href="/book-viewing"
-              className="bg-black text-white px-4 py-2 rounded-full font-semibold hover:bg-blue-600 transition text-center"
+              className="bg-[#3A1E01] text-white px-4 py-2 rounded-full font-semibold hover:bg-blue-600 transition text-center"
               onClick={() => setMenuOpen(false)}
             >
               Book Now

@@ -36,11 +36,11 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="relative bg-linear-to-b from-black via-neutral-900 to-black text-gray-300 pt-20 pb-10 overflow-hidden">
+    <footer className=" relative bg-[#3A1E01] text-gray-300 pt-20 pb-10 overflow-hidden">
       {/* Soft background glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,215,150,0.08)_0%,transparent_60%)]" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="relative z-10 max-w-[1400px]  mx-auto px-6 md:px-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
         {/* Logo + About */}
         <div>
           <div className="flex items-center space-x-3 mb-5">
@@ -154,7 +154,7 @@ From intimate weddings and milestone celebrations to elegant corporate events, e
           <h3 className="text-lg font-semibold text-white mb-4 relative after:content-[''] after:block after:w-10 after:h-0.5 after:bg-[#c68c7c] after:mt-2">
             Follow Us
           </h3>
-          <p className="text-sm text-gray-400 mb-4">
+          <p className="text-sm text-gray-300 mb-4">
             Follow us for glimpses of our most beautiful weddings and events.
           </p>
 
@@ -197,7 +197,7 @@ From intimate weddings and milestone celebrations to elegant corporate events, e
       </div>
 
       {/* Divider + Copyright */}
-      <div className="relative border-t border-neutral-800 mt-16 pt-6 text-center text-sm text-gray-500">
+      <div className="relative border-t border-neutral-800 mt-16 pt-6 text-center text-sm text-gray-300">
         © {new Date().getFullYear()}{" "}
         <span className="text-[#c68c7c] font-medium">Zinnia Gardens</span>. All
         rights reserved.
